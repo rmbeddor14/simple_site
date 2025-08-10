@@ -48,13 +48,100 @@
     .badge { display:inline-grid; place-items:center; min-width: 22px; height: 22px; padding:0 6px; background:#0b0c0f; color: #fff; border-radius: 999px; font-size: 12px; border:1px solid rgba(255,255,255,.12); }
 
     /* Hero */
-    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items:center; padding: 2.2rem 1rem 1.8rem; }
-    .hero h1 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.05; margin: 0 0 .6rem; letter-spacing:-.5px; }
-    .hero p { font-size: clamp(1rem, 1.5vw, 1.15rem); color: var(--muted); margin: 0 0 1.2rem; }
-    .hero .cta { display:flex; gap:.7rem; flex-wrap:wrap; }
-    .hero-card { aspect-ratio: 4/3; border-radius: calc(var(--radius) + 4px); overflow: hidden; position: relative; isolation:isolate; }
-    .hero-card img { width: 100%; height: 100%; object-fit: cover; display:block; filter: contrast(1.05) saturate(1.05); }
-    .hero-tag { position:absolute; left: 12px; bottom: 12px; padding:.5rem .7rem; background: rgba(0,0,0,.45); color:#fff; border-radius: 999px; font-weight:600; border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(6px); }
+    .hero {
+      grid-template-columns: 1.2fr 0.8fr; /* Give more space to content */
+      gap: 3rem;
+      padding: 3.5rem 1rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+      margin: 0 0 2rem;
+      line-height: 1.6;
+    }
+
+    /* Enlarged CTAs */
+    .hero .cta {
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn.primary {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      border-radius: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(139,92,246,0.25);
+    }
+
+    /* Social Proof Section */
+    .social-proof {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .trust-badge svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent);
+    }
+
+    /* Enhanced Product Cards */
+    .card {
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .add {
+      padding: 1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    /* Price Urgency */
+    .price .now {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .sale-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: linear-gradient(135deg, #ff4646, #ff8c42);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      z-index: 1;
+    }
 
     /* Filters */
     .toolbar { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; justify-content:space-between; padding: 1rem; margin-top: .4rem; }
